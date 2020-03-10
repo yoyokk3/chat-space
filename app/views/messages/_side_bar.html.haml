@@ -1,0 +1,29 @@
+.side-bar
+  .side-bar__user-name
+    .side-bar__user-name__top-items
+      %p.side-bar__user-name__top-items__name
+        yo
+      %ul.side-bar__user-name__top-items__icons
+        %li.side-bar__user-name__top-items__icons__edit-user
+          = link_to "#", class:"icon" do
+            = icon('fas', 'edit')
+        %li.side-bar__user-name__top-items__icons__new-group
+          = link_to "#", class:"icon" do
+            = icon('fas', 'cog')
+  .side-bar__group-list
+    %ul.side-bar__group-list__top-items
+      %li.side-bar__group-list__top-items__group-name
+        グループ1
+      %li.side-bar__group-list__top-items__last-message
+        よお
+    %ul.side-bar__group-list__top-items
+      %li.side-bar__group-list__top-items__group-name
+        グループ2
+      %li.side-bar__group-list__top-items__last-message
+        やあ
+    %ul.side-bar__group-list__top-items
+      %li.side-bar__group-list__top-items__group-name
+        グループ3
+      %li.side-bar__group-list__top-items__last-message
+        ああ
+
