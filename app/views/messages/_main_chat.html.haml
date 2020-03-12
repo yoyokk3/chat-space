@@ -1,33 +1,39 @@
-.main-chat
-  .main-chat__group-info
-    .main-chat__group-info__top-items
-      %h1.main-chat__group-info__top-items__group-name test
-      %p.main-chat__group-info__top-items__edit
-        = link_to "Edit", class:"group-edit"
-      %ul.main-chat__group-info__top-items__group-members 
-        %li.main-chat__group-info__top-items__group-members__member yo
-        %li.main-chat__group-info__top-items__group-members__member kato
-  .main-chat__message-list
-    .main-chat__message-list__top-items
-      .main-chat__message-list__top-items__chat
-        %p.main-chat__message-list__top-items__chat__user-name yo
-        %p.main-chat__message-list__top-items__chat__date 2020/1/1
-      %p.main-chat__message-list__top-items__text こんにちは
-      .main-chat__message-list__top-items__chat
-        %p.main-chat__message-list__top-items__chat__user-name yo
-        %p.main-chat__message-list__top-items__chat__date 2020/1/1
-      %p.main-chat__message-list__top-items__text おっす
-      .main-chat__message-list__top-items__chat
-        %p.main-chat__message-list__top-items__chat__user-name yo
-        %p.main-chat__message-list__top-items__chat__date 2020/1/1
-      %p.main-chat__message-list__top-items__text HEY
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h1.main-header__left-box__current-group
+        test
+      %ul.main-header__left-box__member-list
+        "Member:"
+        %li.main-header__left-box__member-list__member
+          yo
+        %li.main-header__left-box__member-list__member
+          kato
+    .main-header__edit
+      Edit
+  .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker yo
+        %p.message__upper-info__date 2020/1/1
+      %p.message__text こんにちは
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker yo
+        %p.message__upper-info__date 2020/1/1
+      %p.message__text こんにちは
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker yo
+        %p.message__upper-info__date 2020/1/1
+      %p.message__text こんにちは
 
-  .main-chat__message-form
-    .main-chat__message-form__form-contents
-      .main-chat__message-form__form-contents__text
-        %input.main-chat__message-form__form-contents__text__comment{placeholder:"type a message", type:"text"}
-          
-        %label.main-chat__message-form__form-contents__text__image
-          = icon("fas", "image")
-          %input{type:"file", class:"select-image"}
-      .main-chat__message-form__form-contents__form Send
+
+  .form
+    %form.new-message
+      .input-box
+        %input.input-box__text{placeholder:"type a message", type:"text"}
+        %label.input-box__image
+          = icon("fa", "image")
+          %input.input-box__image__file{type:"file"}
+      %input.submit-btn{type:"text", Value:"Send"}
