@@ -97,14 +97,16 @@
       }
     }
     &__edit {
-      border: 1px solid #38aef0;
       color: #38aef0;
       position: absolute;
       top: 30px;
       right: 40px;
       height: 40px;
-      line-height: 40px;
+      line-height: 50px;
       padding: 0 20px;
+      .form__submit{
+        text-decoration: none;
+      }
     }
   }
   .messages {
