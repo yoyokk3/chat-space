@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a{
+  text-decoration: none;
+}
+
 .chat-side {
   height: 100vh;
   width: 300px;
@@ -52,6 +56,7 @@
     .group {
       font-weight: bold;
       padding: 20px 20px;
+      
       &__group-name {
         font-size: 15px;
         color: #ffffff;
